@@ -5,22 +5,23 @@ public class MyFirstProgram {
     hello("user");
     hello("alexei");
 
-    double v = 1.0/2;
-    System.out.println("Square with side  " + v + " = " + area(v));
+    Square s = new Square(5);
+    System.out.println("Square with side  " + s.l + " = " + area(s));
 
-    double a = 1;
-    double b = 3;
-    System.out.println("Square of rectangle with side  " + a +" and " + b + " = " + area(a,b));
+    Rectangle r = new Rectangle (4,6);
+    System.out.println("Square of rectangle with side  " + r.a +" and " + r.b + " = " + area(r));
 }
 
 public static void hello(String somebody) {
   System.out.println("Hello," + somebody + " !");
 }
 
-public static double area (double len) {
-  return len * len;
+public static double area (Square s) {
+    return s.l * s.l;
 }
-  public static double area (double a, double b) {
-    return a * b;
+
+  public static double area (Rectangle r) {
+        return r.a * r.b;
   }
+
 }
